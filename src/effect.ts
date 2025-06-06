@@ -47,18 +47,20 @@
     }
 */
 
-// const type_text: HTMLElement | null = document.getElementById('type_text');
-declare const type_text: HTMLElement;
-//React.RefObject<HTMLHeadingElement>;
+//typing effect
+
+// let type_text: HTMLElement | null = null;
+
+declare const type_text: HTMLElement | null;
 
 async function sleep(time: number) { return new Promise(reslove => setTimeout(reslove, time)) }
 
-export async function keep_typing(text: string[], time = 1000) {
+async function keep_typing(text: string[], time = 1000): Promise<void> { 
     while (true) await typesentence(text, time);
 }
 
 
-async function typetext(text: string, time = 1000) {
+async function typetext(text: string, time = 1000): Promise<void> {
     if(!type_text) return;
 
     for (const char of text) {
@@ -67,7 +69,7 @@ async function typetext(text: string, time = 1000) {
     }
 }
 
-async function typesentence(sentence: string[], time: number) {
+async function typesentence(sentence: string[], time: number): Promise<void> {
     for (const eachsen of sentence) {
         cursornotblinking("2px solid white", "animate-cursorTyping");
         await typetext(eachsen, time);
@@ -80,7 +82,7 @@ async function typesentence(sentence: string[], time: number) {
     }
 }
 
- async function erase(time: number){
+ async function erase(time: number): Promise<void> {
         if(!type_text) return;
 
         const length = type_text.innerHTML.length;
@@ -104,3 +106,4 @@ function cursorblinking(class_border_animation: string): void {
     type_text.classList.add(class_border_animation);
 }
 
+export { typesentence , keep_typing };
