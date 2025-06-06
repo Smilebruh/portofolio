@@ -1,6 +1,20 @@
-import React, { type ReactElement } from "react";
+import React, {useRef, useEffect} from "react";
+import { keep_typing } from './effect.ts';
+import { Link } from 'react-router-dom';
 
-export default function Home(): ReactElement {
+export default function Home(): React.ReactElement {
+    
+    // noStrictMode(()=>   );
+    const type_text = useRef<HTMLHeadingElement>(null);
+    const hasRan = useRef(false);
+
+    useEffect(()=>{
+        if(type_text.current && !hasRan.current){
+            keep_typing(["Hi, you can call me Fiona 👋","Glad To Meet You 😊"] ,150);
+            hasRan.current = true;
+        }
+    },[])
+
     return(
       <>
       <div className="flex justify-center bg-[var(--background-color)] text-white font-robotoc z-[0]">
@@ -12,19 +26,19 @@ export default function Home(): ReactElement {
 
             <ul className="flex items-center gap-x-24">
               <li>
-                <a id="home" className="hovered">
+                <Link to="/home" id="home" className="hovered">
                   HOME
-                </a>
+                </Link>
               </li>
               <li>
-                <a id="about" className="">
+                <Link to="/about" id="about" className="">
                   ABOUT
-                </a>
+                </Link>
               </li>
               <li>
-                <a id="portofolio" className="">
+                <Link to="portofolio" id="portofolio" className="">
                   PORTOFOLIO
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -36,7 +50,8 @@ export default function Home(): ReactElement {
                   <b>Cloud + Fullstack Engineer</b>
                 </h1>
                 <div className="flex">
-                  <h1
+                  <h1 
+                    ref={type_text}
                     id="type_text"
                     className="animate-cursorTyping pr-1 h-10 mt-5 font-bold"
                   ></h1>

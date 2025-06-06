@@ -33,7 +33,7 @@ vanilla css
 
 */
 .hovered{
-    @apply text-blue-600 border-blue-900 border-b-2
+    @apply text-blue-700
 }
 
 a{
