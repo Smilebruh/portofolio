@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme{
+    --font-roboto: "Roboto";
+    --animate-cursorTyping: typing 1s linear infinite; 
+}
+
+@keyframes typing{
+    
+    from{
+        border-right: 2px solid white;
+    }
+    
+    to{
+        border-right: none;
+    }
+}
+
+:root{
+    --dark-color :  #1c1c1c;
+    --darker-color : #0c0c0c;
+
+    --background-color : #333446;
+    --main-color:  #7F8CAA;
+}
+
+
+
+/*
+
+vanilla css
+
+*/
+.hovered{
+    @apply text-blue-600 border-blue-900 border-b-2
+}
+
+a{
+    cursor: pointer;
+
+}
+
+#random-button:hover{
+    
+}
+
+name{
+    @apply text-red-900;
+}
