@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import Home from "./Home";
 import About from "./About";
 import Portofolio from "./Portofolio";
-import { sleep } from './effect';
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 const linkId: string[] = ["home", "about", "portofolio"];
