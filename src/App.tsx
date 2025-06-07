@@ -80,7 +80,7 @@ export default function App(): React.ReactElement {
         
             <div className="flex items-center justify-center">
               <Link
-                to="/"
+                to="/myPortofolio/"
                 id="home"
                 className="currentPage link"
                 draggable={false}
@@ -89,7 +89,7 @@ export default function App(): React.ReactElement {
               </Link>
 
               <Link 
-                to="/about" 
+                to="/myPortofolio/about" 
                 id="about" 
                 className="link" 
                 draggable={false}
@@ -98,7 +98,7 @@ export default function App(): React.ReactElement {
               </Link>
 
               <Link
-                to="/portofolio"
+                to="/myPortofolio/portofolio"
                 id="portofolio"
                 className="link"
                 draggable={false}
@@ -109,9 +109,9 @@ export default function App(): React.ReactElement {
           </nav>
 
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/portofolio" element={<Portofolio />} />
+            <Route path="/myPortofolio/" element={<Home />} />
+            <Route path="/myPortofolio/about" element={<About />} />
+            <Route path="/myPortofolio/portofolio" element={<Portofolio />} />
           </Routes>
         </main>
       </div>
