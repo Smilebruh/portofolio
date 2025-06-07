@@ -44,7 +44,7 @@ export default function Home(): React.ReactElement {
           </div>
           <div className="flex relative justify-center items-center w-1/2 ">
             <img
-              src="images/KawaiiFiona.png"
+              src="/images/KawaiiFiona.png"
               className="w-3/4 p-1/4 z-[2] rounded-full bg-[var(--bg-fiona)]"
             />
           </div>
