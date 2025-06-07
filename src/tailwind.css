@@ -36,17 +36,8 @@ vanilla css
     @apply text-blue-700
 }
 
-a{
-    cursor: pointer;
-
-}
-
-#random-button:hover{
-    
-}
-
 .link{
-    @apply  flex w-30 h-16 justify-center items-center select-none
+    @apply flex w-72 h-16 justify-center items-center select-none text-[17px]
 }
 
 name{
