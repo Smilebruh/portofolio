@@ -75,13 +75,10 @@ export default function App(): React.ReactElement {
 
   return (
     <Router>
-      <div className="flex justify-center bg-[var(--background-color)] text-white font-roboto z-[0] h-screen w-screen">
+      <div className="flex justify-center bg-[var(--background-color)] text-[var(--lavender-blush)] font-roboto z-[0] h-screen w-screen">
         <main className="flex flex-col items-center my-6 w-[95%] h-[92%] rounded-[5px] bg-[var(--main-color)]">
-          <nav className="rounded-[5px] flex justify-center h-[10%] mt-5 w-[97%] ">
-            <div>
-              <img src="" />
-            </div>
-
+          <nav className="rounded-[5px] flex justify-center h-[10%] mt-5 w-[97%]">
+        
             <div className="flex items-center justify-center">
               <Link
                 to="/"

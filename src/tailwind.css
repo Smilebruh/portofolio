@@ -9,7 +9,7 @@
 @keyframes typing{
     
     from{
-        border-right: 2px solid white;
+        border-right: 2px solid var(--lavender-blush);
     }
     
     to{
@@ -18,11 +18,20 @@
 }
 
 :root{
-    --dark-color :  #1c1c1c;
-    --darker-color : #0c0c0c;
+    /* --background-color : #333446;
+    --main-color:  #7F8CAA; */
 
-    --background-color : #333446;
-    --main-color:  #7F8CAA;
+    --background-color: #000000ff;
+    --main-color: #221E2Fff;
+    --bg-fiona : #F2EBEFff;
+
+
+    --raisin-black: #322833ff;
+    --black: #000000ff;
+    --raisin-black-2: #221E2Fff;
+    --lavender-blush: #F2EBEFff;
+    --black-2: #000000ff;
+
 }
 
 
@@ -33,13 +42,17 @@ vanilla css
 
 */
 .currentPage{
-    @apply text-blue-700
+    @apply text-[#845d87]
 }
 
 .link{
-    @apply flex w-72 h-16 justify-center items-center select-none text-[17px]
+    @apply flex w-72 h-16 justify-center items-center select-none text-[17px] 
 }
 
 name{
     @apply text-red-900;
+}
+
+@keyframes hightLight {
+    
 }

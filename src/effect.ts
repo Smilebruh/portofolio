@@ -20,11 +20,11 @@ async function typetext(text: string, time = 1000): Promise<void> {
 
 async function typesentence(sentence: string[], time: number): Promise<void> {
     for (const eachsen of sentence) {
-        cursornotblinking("2px solid white", "animate-cursorTyping");
+        cursornotblinking("2px solid var(--lavender-blush)", "animate-cursorTyping");
         await typetext(eachsen, time);
         cursorblinking("animate-cursorTyping");
         await sleep(2500);
-        cursornotblinking("2px solid white", "animate-cursorTyping");
+        cursornotblinking("2px solid var(--lavender-blush)", "animate-cursorTyping");
         await erase(Math.round(time / 4));
         await sleep(500);
 
