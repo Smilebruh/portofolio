@@ -4,6 +4,80 @@
 @theme{
     --font-roboto: "Roboto";
     --animate-cursorTyping: typing 1s linear infinite; 
+    --animate-lineRightDiagonalfor: lineRightDiagonal 0.3s linear forwards;
+    --animate-lineLeftDiagonalfor: lineLeftDiagonal 0.3s linear forwards;
+    --animate-vanishingLinefor: vanishingLine 0.3s linear forwards;
+}
+
+/* @keyframes menuTranstition{
+    50%{
+        @apply 
+    }
+
+    75%{
+
+    }
+
+    100%{
+
+    }
+} */
+
+@keyframes lineLeftDiagonal{
+    0%{
+        transform: rotate(-5deg) translate(1px,-1px);
+    }
+    25%{
+       transform: rotate(-11.25deg) translate(1.75px,-1.75px);
+    }
+    50%{
+       transform: rotate(-22.5deg)   translate(3.5px,-3.5px);
+    }
+    75%{
+       transform: rotate(-33.75deg) translate(5.25px,-5.25px);
+    }
+    100%{
+       transform: rotate(-45deg) translate(7px,-7px)
+    }
+}
+
+@keyframes lineRightDiagonal{
+    0%{
+       transform: rotate(5deg) translate(1px,1px);
+    }
+    25%{
+       transform: rotate(11.25deg) translate(1.75px);
+       
+    }
+    50%{
+       transform: rotate(22.5deg) translate(3.5px,3.5px);
+       
+    }
+    75%{
+       transform: rotate(33.75deg) translate(5.25px,5.25px);
+       
+    }
+    100%{
+       transform: rotate(45deg) translate(7px,7px);
+       
+    }
+}
+
+@keyframes vanishingLine{
+    50%{
+        transform: translateX(-20px);
+        width: 40%;
+    }
+
+    75%{
+        transform: translateX(-30px);
+        width: 25%;
+    }
+    100%{
+        transform: translateX(-40px);
+        width: 0%;
+        display: none;
+    }
 }
 
 @keyframes typing{
@@ -42,17 +116,25 @@ vanilla css
 
 */
 .currentPage{
-    @apply text-[#845d87]
+    @apply text-[#ff6f61]
 }
 
 .link{
     @apply flex w-72 h-16 justify-center items-center select-none text-[17px] 
 }
 
+.line{
+    @apply bg-white rounded-[50px] w-1/2 h-0.5 text-center text-[0%]
+}
+
+/* .diagonalLine{
+    @apply bg-white rounded-[50px] w-1/2 h-[30%] text-center text-[0%]
+} */
+
 name{
     @apply text-red-900;
 }
 
-@keyframes hightLight {
-    
+.try{
+    transform: rotate(-45deg)
 }

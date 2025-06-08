@@ -35,7 +35,7 @@ export default function Home(): React.ReactElement {
               <div className="flex pt-10">
                 <button
                   id="random-button"
-                  className="flex text-[20px] justify-center items-center rounded-[10px] bg-[var(--black)] w-[150px] h-[50px] cursor-pointer hover:bg-transparent hover:border-white border-[var(--black)] border-2"
+                  className="flex text-[20px] justify-center items-center rounded-[10px] bg-[var(--black)] lg:w-[150px] lg:h-[50px] cursor-pointer hover:bg-transparent hover:border-white border-[var(--black)] border-2"
                 >
                   More
                 </button>
