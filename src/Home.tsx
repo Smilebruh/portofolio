@@ -34,7 +34,7 @@ export default function Home(): React.ReactElement {
                   className="animate-cursorTyping pr-1 h-10 mt-10 font-bold md:mt-5 "
                 ></h1>
               </div>
-              <p className="text-[17px] mt-5">
+              <p className="text-[17px] md:mt-5 mt-15">
                 I'm a passionate software engineering student to explore and
                 learn new technology. Feel free being my friend.
               </p>
