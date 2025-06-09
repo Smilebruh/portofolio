@@ -15,9 +15,15 @@ export default function Home(): React.ReactElement {
 
   return (
    
-        <section className="flex rounded-[5px] w-[97%] h-[80%] mt-5 ">
-          <div className="flex text-[var(--lavender-blush)] text-[30px] justify-end items-center h-full w-1/2">
-            <div className="inline-flex flex-col w-3/4 h-3/4 ">
+        <section className="flex flex-col items-center rounded-[5px] w-[97%] md:h-[80%] md:mt-5 md:flex-row md:justify-start mt-15">
+          <div className="flex relative justify-center items-center w-1/2 md:hidden">
+            <img
+              src="/myPortofolio/images/KawaiiFiona.png"
+              className="w-3/4 p-1/4 z-[2] rounded-full bg-[var(--bg-fiona)]"
+            />
+          </div>
+          <div className="flex text-[var(--lavender-blush)] text-[30px] justify-end items-center h-full md:w-1/2 w-full ">
+            <div className="inline-flex flex-col md:w-3/4 w-full h-3/4">
               <h1>
                 <b>Cloud + Fullstack Engineer</b>
               </h1>
@@ -25,7 +31,7 @@ export default function Home(): React.ReactElement {
                 <h1
                   ref={type_text}
                   id="type_text"
-                  className="animate-cursorTyping pr-1 h-10 mt-5 font-bold"
+                  className="animate-cursorTyping pr-1 h-10 mt-10 font-bold md:mt-5 "
                 ></h1>
               </div>
               <p className="text-[17px] mt-5">
@@ -35,14 +41,14 @@ export default function Home(): React.ReactElement {
               <div className="flex pt-10">
                 <button
                   id="random-button"
-                  className="flex text-[20px] justify-center items-center rounded-[10px] bg-[var(--black)] lg:w-[150px] lg:h-[50px] cursor-pointer hover:bg-transparent hover:border-white border-[var(--black)] border-2"
+                  className="flex text-[20px] justify-center items-center rounded-[10px] bg-[var(--black)] w-[150px] h-[50px] cursor-pointer hover:bg-transparent hover:border-white border-[var(--black)] border-2"
                 >
                   More
                 </button>
               </div>
             </div>
           </div>
-          <div className="flex relative justify-center items-center w-1/2 ">
+          <div className="hidden md:flex relative justify-center items-center w-1/2 ">
             <img
               src="/myPortofolio/images/KawaiiFiona.png"
               className="w-3/4 p-1/4 z-[2] rounded-full bg-[var(--bg-fiona)]"
