@@ -15,6 +15,8 @@
   --animate-lineLeftDiagonalrev: lineLeftDiagonal 0.2s linear reverse;
 }
 
+/* animation */
+
 @keyframes lineRightDiagonal {
   0% {
     transform: rotate(0deg) translate(0px, 0px);
@@ -94,22 +96,19 @@
   --black-2: #000000ff;
 }
 
-/*
-
-vanilla css
-
-*/
 .currentPage {
   @apply text-[#ff6f61];
 }
 
 .link {
-  @apply flex w-72 h-16 justify-center items-center select-none text-[17px];
+  @apply flex md:w-72 h-16 justify-center items-center select-none md:text-[17px] w-28 text-[14px];
 }
 
 .line {
   @apply bg-white rounded-[50px] w-1/2 h-0.5 text-center text-[0%];
 }
+
+/*vanilla css*/
 
 .firstThirdLineStart {
   transform: rotate(0deg) translate(0px, 0px);

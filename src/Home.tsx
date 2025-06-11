@@ -22,12 +22,12 @@ export default function Home(): React.ReactElement {
               className="w-3/4 p-1/4 z-[2] rounded-full bg-[var(--bg-fiona)]"
             />
           </div>
-          <div className="flex text-[var(--lavender-blush)] text-[30px] justify-end items-center h-full md:w-1/2 w-full ">
+          <div className="flex text-[var(--lavender-blush)] md:text-[30px] text-[25px] justify-end items-center h-full md:w-1/2 w-full ">
             <div className="inline-flex flex-col md:w-3/4 w-full h-3/4">
-              <h1>
+              <h1 className="flex justify-center md:inline">
                 <b>Cloud + Fullstack Engineer</b>
               </h1>
-              <div className="flex">
+              <div className="flex md:justify-start justify-center">
                 <h1
                   ref={type_text}
                   id="type_text"

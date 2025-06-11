@@ -77,6 +77,9 @@ export default function App(): React.ReactElement {
         currentMenu.children[index].classList.remove(animation);
         currentMenu.children[index].classList.add(lineStyleEnd[index]);
       });
+
+      linkBox.current?.classList.remove('hidden');
+      linkBox.current?.classList.add('flex');
     } else {
       minAnimationList.forEach((_, index) => {
         if (
@@ -98,6 +101,8 @@ export default function App(): React.ReactElement {
         currentMenu.children[index].classList.remove(animation);
         currentMenu.children[index].classList.add(lineStyleStart[index]);
       });
+      linkBox.current?.classList.add('hidden');
+      linkBox.current?.classList.remove('flex')
     }
 
     allowToMenu.current = true;
@@ -105,8 +110,8 @@ export default function App(): React.ReactElement {
   };
 
   const hasRan: React.RefObject<boolean> = useRef(false);
-  const currentPageLink: React.RefObject<HTMLElement | null | undefined> =
-    useRef<HTMLElement | null | undefined>(null);
+  const linkBox: React.RefObject<HTMLDivElement | null> = useRef(null);
+  const currentPageLink: React.RefObject<HTMLElement | null | undefined> = useRef<HTMLElement | null | undefined>(null);
   const linkRef: (HTMLElement | null)[] = Array(linkId.length).fill(null);
 
   useEffect(() => {
@@ -156,8 +161,8 @@ export default function App(): React.ReactElement {
     <Router>
       <div className="flex justify-center bg-[var(--background-color)] text-[var(--lavender-blush)] font-roboto z-[0] h-screen w-screen ">
         <main className="flex flex-col items-center my-6 md:w-[95%] md:h-[92%] md:rounded-[5px] bg-[var(--main-color)] w-screen h-screen">
-          <nav className="rounded-[5px] flex justify-center h-[10%] md:mt-5 w-[97%]">
-            <div className="md:flex items-center justify-center hidden">
+          <nav className="rounded-[5px] flex md:justify-center justify-end h-[10%] md:mt-5 w-[97%]">
+            <div ref={linkBox} className="md:flex items-center justify-center md:w-auto hidden  w-[85%]">
               <Link
                 to="/myPortofolio/"
                 id="home"
@@ -185,9 +190,9 @@ export default function App(): React.ReactElement {
                 PORTOFOLIO
               </Link>
             </div>
-            <div className="md:hidden flex justify-end w-screen">
+            <div className="md:hidden flex justify-end w-[15%] items-center ">
               <div
-                className=" flex w-[15%] h-[50%] flex-col items-center gap-2 m-[5%] cursor-pointer"
+                className=" flex w-full h-[50%] flex-col items-center gap-2 m-[5%] cursor-pointer justify-center"
                 onClick={menuFunction}
               >
                 <div className="line firstThirdLineStart ">1</div>
