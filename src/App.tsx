@@ -160,9 +160,10 @@ export default function App(): React.ReactElement {
   return (
     <Router>
       <div className="flex justify-center bg-[var(--background-color)] text-[var(--lavender-blush)] font-roboto z-[0] h-screen w-screen ">
-        <main className="flex flex-col items-center my-6 md:w-[95%] md:h-[92%] md:rounded-[5px] bg-[var(--main-color)] w-screen h-screen">
-          <nav className="rounded-[5px] flex md:justify-center justify-end h-[10%] md:mt-5 w-[97%]">
-            <div ref={linkBox} className="md:flex items-center justify-center md:w-auto hidden  w-[85%]">
+        <main className="flex flex-col items-center my-6 lg:w-[95%] lg:h-[92%] lg:rounded-[5px] bg-[var(--main-color)] w-screen h-screen">
+          <nav className="rounded-[5px] flex lg:justify-center justify-end h-[10%] lg:mt-5 w-[97%] items-center">
+            <div ref={linkBox} className="lg:flex items-center justify-center lg:w-auto hidden  w-[85%] lg:h-auto h-[50%]">
+              <h1 className="hidden lg:flex text-[30px] font-bold mr-60 text-[#9f5062]">Fiona</h1>
               <Link
                 to="/myPortofolio/"
                 id="home"
@@ -190,9 +191,9 @@ export default function App(): React.ReactElement {
                 PORTOFOLIO
               </Link>
             </div>
-            <div className="md:hidden flex justify-end w-[15%] items-center ">
+            <div className="lg:hidden flex justify-end w-[15%] items-center ">
               <div
-                className=" flex w-full h-[50%] flex-col items-center gap-2 m-[5%] cursor-pointer justify-center"
+                className=" flex w-full h-[50%] flex-col items-center gap-2 m-[5%] cursor-pointer justify-center "
                 onClick={menuFunction}
               >
                 <div className="line firstThirdLineStart ">1</div>

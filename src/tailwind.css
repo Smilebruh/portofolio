@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -13,6 +14,9 @@
   --animate-lineRightDiagonalrev: lineRightDiagonal 0.2s linear reverse;
   --animate-vanishingLinerev: vanishingLine 0.2s linear reverse;
   --animate-lineLeftDiagonalrev: lineLeftDiagonal 0.2s linear reverse;
+
+  --animate-profileanimation: profileanimation 0.5s linear forwards;
+  --animate-textanimation: textanimation 0.5s linear forwards;
 }
 
 /* animation */
@@ -83,6 +87,52 @@
   }
 }
 
+@keyframes profileanimation{
+  0%{
+    transform: translateX(700px);
+    opacity: 0;
+  }
+  25%{
+    transform: translateX(500px);
+    opacity: 0.4;
+  }
+  50%{
+    transform: translateX(300px);
+    opacity: 0.6;
+  }
+  75%{
+    transform: translateX(100px);
+    opacity: 0.8;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes textanimation{
+  0%{
+    transform: translateX(-700px);
+    opacity: 0;
+  }
+  25%{
+    transform: translateX(-500px);
+    opacity: 0.4;
+  }
+  50%{
+    transform: translateX(-300px);
+    opacity: 0.6;
+  }
+  75%{
+    transform: translateX(-100px);
+    opacity: 0.8;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 :root {
 
   --background-color: #000000ff;
@@ -96,6 +146,7 @@
   --black-2: #000000ff;
 }
 
+/*#ff6f61*/
 .currentPage {
   @apply text-[#ff6f61];
 }

@@ -15,30 +15,30 @@ export default function Home(): React.ReactElement {
 
   return (
    
-        <section className="flex flex-col items-center rounded-[5px] w-[97%] md:h-[80%] md:mt-5 md:flex-row md:justify-start mt-15">
-          <div className="flex relative justify-center items-center w-1/2 md:hidden">
+        <section className="flex flex-col items-center rounded-[5px] w-[97%] lg:h-[80%] lg:mt-5 lg:flex-row lg:justify-start mt-15">
+          <div className="flex relative justify-center items-center w-1/2 lg:hidden">
             <img
               src="/myPortofolio/images/KawaiiFiona.png"
-              className="w-3/4 p-1/4 z-[2] rounded-full bg-[var(--bg-fiona)]"
+              className="w-3/4 p-1/4 z-[2] rounded-full bg-[var(--bg-fiona)] animate-profileanimation"
             />
           </div>
-          <div className="flex text-[var(--lavender-blush)] md:text-[30px] text-[25px] justify-end items-center h-full md:w-1/2 w-full ">
-            <div className="inline-flex flex-col md:w-3/4 w-full h-3/4">
-              <h1 className="flex justify-center md:inline">
+          <div className="flex text-[var(--lavender-blush)] lg:text-[30px] text-[25px] justify-end items-center h-full lg:w-1/2 w-full animate-textanimation ">
+            <div className="inline-flex flex-col lg:w-3/4 w-full h-3/4">
+              <h1 className="flex justify-center lg:inline">
                 <b>Cloud + Fullstack Engineer</b>
               </h1>
-              <div className="flex md:justify-start justify-center">
+              <div className="flex lg:justify-start justify-center">
                 <h1
                   ref={type_text}
                   id="type_text"
-                  className="animate-cursorTyping pr-1 h-10 mt-10 font-bold md:mt-5 "
+                  className="animate-cursorTyping pr-1 h-10 mt-10 font-bold lg:mt-5"
                 ></h1>
               </div>
-              <p className="text-[17px] md:mt-5 mt-15">
+              <p className="text-[17px] lg:mt-5 mt-15 lg:text-left text-center">
                 I'm a passionate software engineering student to explore and
                 learn new technology. Feel free being my friend.
               </p>
-              <div className="flex pt-10">
+              <div className="flex pt-10 lg:justify-start justify-center">
                 <button
                   id="random-button"
                   className="flex text-[20px] justify-center items-center rounded-[10px] bg-[var(--black)] w-[150px] h-[50px] cursor-pointer hover:bg-transparent hover:border-white border-[var(--black)] border-2"
@@ -48,7 +48,7 @@ export default function Home(): React.ReactElement {
               </div>
             </div>
           </div>
-          <div className="hidden md:flex relative justify-center items-center w-1/2 ">
+          <div className="hidden lg:flex relative justify-center items-center w-1/2 animate-profileanimation">
             <img
               src="/myPortofolio/images/KawaiiFiona.png"
               className="w-3/4 p-1/4 z-[2] rounded-full bg-[var(--bg-fiona)]"
