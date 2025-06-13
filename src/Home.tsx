@@ -76,7 +76,7 @@ export default function Home(): React.ReactElement {
           </div>
         </div>
 
-        <div className="hidden lg:flex relative justify-center items-center w-1/2 animate-profileanimation">
+        <div className="hidden lg:flex relative justify-center items-center w-1/2">
           <img
             src="/myPortofolio/images/KawaiiFiona.webp"
             className="w-3/4 p-1/4 z-[2] rounded-full bg-[var(--bg-fiona)]"

@@ -15,7 +15,7 @@
   --animate-vanishingLinerev: vanishingLine 0.2s linear reverse;
   --animate-lineLeftDiagonalrev: lineLeftDiagonal 0.2s linear reverse;
 
-  --animate-linkanimation: linkanimation 0.2s linear reverse
+  /* --animate-linkanimation: linkanimation 0.2s linear reverse */
   --animate-profileanimation: profileanimation 0.5s linear forwards;
   --animate-textanimation: textanimation 0.5s linear forwards;
 }
@@ -134,7 +134,7 @@
   }
 }
 
-@keyframes linkanimation{
+/* @keyframes linkanimation{
   0%{
     transform: translateX(50px)
   }
@@ -150,7 +150,7 @@
   100%{
     transform: translateX(0px)
   }
-}
+} */
 
 :root {
 
