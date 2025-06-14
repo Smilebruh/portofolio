@@ -1,18 +1,47 @@
 import React, { useRef, useEffect } from "react";
-import { keep_typing } from "./effect.ts";
+import { keep_typing, sleep } from "./effect.ts";
 import { Link }  from 'react-router-dom';
 
 export default function Home(): React.ReactElement {
-  const type_text = useRef<HTMLHeadingElement>(null);
+  const type_text: React.RefObject<HTMLHeadingElement | null>  = useRef<HTMLHeadingElement | null>(null);
+  const medsocRef: React.RefObject<HTMLDivElement | null> = useRef<HTMLDivElement | null>(null);
+  const allowHover: React.RefObject<Boolean>[] = Array(4).fill(useRef(true)); 
   const hasRan = useRef(false);
 
   useEffect(() => {
-    if (type_text.current && !hasRan.current) {
-      keep_typing(["Hi, you can call me Fiona ", "Glad To Meet You "], 150);
-      hasRan.current = true;
+    if (type_text.current && !hasRan.current)  keep_typing(["Hi, you can call me Fiona ", "Glad To Meet You "], 150);
+    
+    document.title = "Portofolio | Home";
+
+    if (!medsocRef.current || hasRan.current) return;
+    for( const [index,link] of Array.from(medsocRef.current.children).entries()){
+      link.children[0].addEventListener('mouseover', async thisLink => {
+        if(!allowHover[index].current) return;
+
+        const currentTarget = thisLink.currentTarget as HTMLElement;
+        currentTarget?.classList.add('animate-roundedIconfor');
+        await sleep(500);
+        currentTarget?.classList.add('rounded-full');
+        currentTarget?.classList.remove('animate-roundedIconfor');
+
+        allowHover[index].current = false;
+        console.log('hover in')
+      });
+
+      link.children[0].addEventListener('mouseout', async thisLink => {
+        const currentTarget = thisLink.currentTarget as HTMLElement;
+        currentTarget?.classList.add('animate-roundedIconrev');
+        await sleep(500);
+        currentTarget?.classList.remove('rounded-full');
+        currentTarget?.classList.remove('animate-roundedIconrev');
+
+        allowHover[index].current = true;
+        console.log('hover out')
+      });
+
+    hasRan.current = true;
     }
 
-    document.title = "Portofolio | Home"
   }, []);
 
   return (
@@ -51,32 +80,36 @@ export default function Home(): React.ReactElement {
             </div>
             
             <h1 className="flex mb-5 mt-20 lg:ml-2 text-[17px] lg:justify-start justify-center text-[#db7d66]">Follow me for more</h1>
-            <footer className="lg:ml-2 w-full flex lg:justify-start justify-center items-center gap-4">
+            <div ref={medsocRef} className="lg:ml-2 w-full flex lg:justify-start justify-center items-center gap-4">
               <Link to="https://www.kaggle.com/smilehacking">
                 <img
                   src="/myPortofolio/images/189_Kaggle_logo_logos-512.webp"
-                  className="w-9 h-full rounded-full bg-[var(--lavender-blush)]"
+                  className="w-9 h-full rounded-[5px] bg-[var(--lavender-blush)]"
+              
                 />
               </Link>
               <Link to="https://github.com/smilebruh/smilebruh" className="flex justify-center items-center">
                 <img 
                   src="/myPortofolio/images/github-mark.webp" 
-                  className="w-9 h-full bg-[var(--lavender-blush)] rounded-full"
+                  className="w-9 h-full bg-[var(--lavender-blush)] rounded-[5px]"
+              
                 />
               </Link>
               <Link to="https://stackoverflow.com/users/29076795/smilebruh">
                 <img 
                   src="/myPortofolio/images/Stack_Overflow_icon.webp" 
-                  className="w-9 h-full rounded-full"  
+                  className="w-9 h-full rounded-[5px]"  
+                  
                 />
               </Link> 
               <Link to="https://www.instagram.com/dimasalx.sa_/">
                 <img 
                   src="/myPortofolio/images/ig.webp" 
-                  className="w-9 h-full rounded-full"
+                  className="w-9 h-full rounded-[5px]"
+            
                 />
               </Link>
-            </footer>
+            </div>
           </div>
         </div>
 

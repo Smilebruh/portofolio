@@ -19,6 +19,9 @@
   
   --animate-profileanimation: profileanimation 0.5s linear forwards;
   --animate-textanimation: textanimation 0.5s linear forwards;
+
+  --animate-roundedIconfor: roundedIcon 0.5s linear forwards;
+  --animate-roundedIconrev: roundedIcon 0.5s linear reverse;
 }
 
 /* animation */
@@ -177,6 +180,21 @@
     border-radius: 50px;
     font-size: 0px;
     opacity: 1;
+  }
+}
+
+@keyframes roundedIcon{
+  25%{
+    border-radius: 25%;
+  }
+  50%{
+    border-radius: 50%
+  }
+  75%{
+    border-radius: 75%
+  }
+  100%{
+    border-radius: 100%
   }
 }
 
