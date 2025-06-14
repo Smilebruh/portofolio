@@ -7,15 +7,15 @@
 
   --animate-cursorTyping: typing 1s linear infinite;
 
-  --animate-lineRightDiagonalfor: lineRightDiagonal 0.2s linear forwards;
-  --animate-vanishingLinefor: vanishingLine 0.2s linear forwards;
-  --animate-lineLeftDiagonalfor: lineLeftDiagonal 0.2s linear forwards;
-  --animate-linkAnimationfor: linkanimation 0.2s linear forwards;
+  --animate-lineRightDiagonalfor: lineRightDiagonal 0.3s linear forwards;
+  --animate-vanishingLinefor: vanishingLine 0.3s linear forwards;
+  --animate-lineLeftDiagonalfor: lineLeftDiagonal 0.3s linear forwards;
+  --animate-linkAnimationfor: linkanimation 0.3s linear forwards;
 
-  --animate-lineRightDiagonalrev: lineRightDiagonal 0.2s linear reverse;
-  --animate-vanishingLinerev: vanishingLine 0.2s linear reverse;
-  --animate-lineLeftDiagonalrev: lineLeftDiagonal 0.2s linear reverse;
-  --animate-linkAnimationrev: linkanimation 0.2s linear reverse;
+  --animate-lineRightDiagonalrev: lineRightDiagonal 0.3s linear reverse;
+  --animate-vanishingLinerev: vanishingLine 0.3s linear reverse;
+  --animate-lineLeftDiagonalrev: lineLeftDiagonal 0.3s linear reverse;
+  --animate-linkAnimationrev: linkanimation 0.3s linear reverse;
   
   --animate-profileanimation: profileanimation 0.5s linear forwards;
   --animate-textanimation: textanimation 0.5s linear forwards;
@@ -43,20 +43,25 @@
 
 @keyframes vanishingLine {
   0% {
+    transform: translateX(0px);
+    opacity: 1;
     width: 50%;
-    transform: translateX((0px));
+
   }
   50% {
     transform: translateX(-20px);
+    opacity: 0.5;
     width: 40%;
   }
 
   75% {
     transform: translateX(-30px);
+    opacity: 0;
     width: 25%;
   }
   100% {
-    transform: translateX(-45px);
+    transform: translateX(-35px);
+    opacity: 0;
     width: 0%;
   }
 }
@@ -137,23 +142,40 @@
 
 @keyframes linkanimation{
   0%{
+    background-color: var(--lavender-blush);
     transform: translateX(50px);
+    border-radius: 50px;
+    height: 0.125rem;
+    font-size: 0px;
     opacity: 0;
   }
   25%{
+    background-color: var(--lavender-blush);
     transform: translateX(37.5px);
-    opacity: 0.25;
+    border-radius: 50px;
+    height: 0.25rem;
+    font-size: 0px;
+    opacity: 0;
   } 
   50%{
+    background-color: var(--lavender-blush);
     transform: translateX(25px);
-    opacity: 0.5
+    border-radius: 50px;
+    height: 0.5rem;
+    font-size: 0px;
+    opacity: 0.5;
   }
   75%{
     transform: translateX(12.5px);
+    border-radius: 50px;
+    height: 1rem;
+    font-size: 0px;
     opacity: 0.75;
   }
   100%{
     transform: translateX(0px);
+    border-radius: 50px;
+    font-size: 0px;
     opacity: 1;
   }
 }
@@ -171,7 +193,6 @@
   --black-2: #000000ff;
 }
 
-/*#ff6f61*/
 .currentPage {
   @apply text-[#ff6f61];
 }

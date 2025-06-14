@@ -8,7 +8,7 @@ export default function Home(): React.ReactElement {
 
   useEffect(() => {
     if (type_text.current && !hasRan.current) {
-      keep_typing(["Hi, you can call me Fiona 👋", "Glad To Meet You 😊"], 150);
+      keep_typing(["Hi, you can call me Fiona ", "Glad To Meet You "], 150);
       hasRan.current = true;
     }
 
@@ -49,8 +49,9 @@ export default function Home(): React.ReactElement {
                 Contact Me
               </Link>
             </div>
-
-            <footer className="lg:mt-20 mt-20 lg:ml-2 w-full flex lg:justify-start justify-center items-center gap-4  ">
+            
+            <h1 className="flex mb-5 mt-20 lg:ml-2 text-[17px] lg:justify-start justify-center text-[#db7d66]">Follow me for more</h1>
+            <footer className="lg:ml-2 w-full flex lg:justify-start justify-center items-center gap-4">
               <Link to="https://www.kaggle.com/smilehacking">
                 <img
                   src="/myPortofolio/images/189_Kaggle_logo_logos-512.webp"

@@ -73,17 +73,19 @@ export default function App(): React.ReactElement {
         currentMenu.children[index].classList.add(animation)
       );
       
+      linkBox.current?.classList.remove('hidden');
+      linkBox.current?.classList.add('flex');
       linkBox.current?.classList.add("animate-linkAnimationfor");
-
-      await sleep(200);
+      
+      await sleep(300);
+    
       menuAnimationList.forEach((animation, index) => {
         currentMenu.children[index].classList.remove(animation);
         currentMenu.children[index].classList.add(lineStyleEnd[index]);
       });
 
       linkBox.current?.classList.remove("animate-linkAnimationfor");
-      linkBox.current?.classList.remove('hidden');
-      linkBox.current?.classList.add('flex');
+      
     } else {
       minAnimationList.forEach((_, index) => {
         if (
@@ -103,7 +105,7 @@ export default function App(): React.ReactElement {
 
       linkBox.current?.classList.add("animate-linkAnimationrev");
 
-      await sleep(200);
+      await sleep(300);
       minAnimationList.forEach((animation, index) => {
         currentMenu.children[index].classList.remove(animation);
         currentMenu.children[index].classList.add(lineStyleStart[index]);
