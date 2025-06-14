@@ -10,12 +10,13 @@
   --animate-lineRightDiagonalfor: lineRightDiagonal 0.2s linear forwards;
   --animate-vanishingLinefor: vanishingLine 0.2s linear forwards;
   --animate-lineLeftDiagonalfor: lineLeftDiagonal 0.2s linear forwards;
+  --animate-linkAnimationfor: linkanimation 0.2s linear forwards;
 
   --animate-lineRightDiagonalrev: lineRightDiagonal 0.2s linear reverse;
   --animate-vanishingLinerev: vanishingLine 0.2s linear reverse;
   --animate-lineLeftDiagonalrev: lineLeftDiagonal 0.2s linear reverse;
-
-  /* --animate-linkanimation: linkanimation 0.2s linear reverse */
+  --animate-linkAnimationrev: linkanimation 0.2s linear reverse;
+  
   --animate-profileanimation: profileanimation 0.5s linear forwards;
   --animate-textanimation: textanimation 0.5s linear forwards;
 }
@@ -134,23 +135,28 @@
   }
 }
 
-/* @keyframes linkanimation{
+@keyframes linkanimation{
   0%{
-    transform: translateX(50px)
+    transform: translateX(50px);
+    opacity: 0;
   }
   25%{
-    
+    transform: translateX(37.5px);
+    opacity: 0.25;
   } 
   50%{
-
+    transform: translateX(25px);
+    opacity: 0.5
   }
   75%{
-
+    transform: translateX(12.5px);
+    opacity: 0.75;
   }
   100%{
-    transform: translateX(0px)
+    transform: translateX(0px);
+    opacity: 1;
   }
-} */
+}
 
 :root {
 

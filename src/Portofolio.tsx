@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function Portofolio(): React.ReactElement {
+  useEffect(() => {
+    document.title = "Portofolio";
+  })
   return (
     <div className="bg-black">
       

@@ -11,6 +11,8 @@ export default function Home(): React.ReactElement {
       keep_typing(["Hi, you can call me Fiona 👋", "Glad To Meet You 😊"], 150);
       hasRan.current = true;
     }
+
+    document.title = "Portofolio | Home"
   }, []);
 
   return (
@@ -22,7 +24,7 @@ export default function Home(): React.ReactElement {
             className="w-3/4 p-1/4 z-[2] rounded-full bg-[var(--bg-fiona)] animate-profileanimation"
           />
         </div>
-        <div className="flex text-[var(--lavender-blush)] lg:text-[30px] text-[25px] justify-end items-center h-full lg:w-1/2 w-full animate-textanimation ">
+        <div className="flex text-[var(--lavender-blush)] lg:text-[30px] text-[25px] justify-end items-center h-full lg:w-1/2 w-full animate-textanimation">
           <div className="inline-flex flex-col lg:w-3/4 w-full h-3/4">
             <h1 className="flex justify-center lg:inline">
               <b>ML/AI + Fullstack Engineer</b>
@@ -39,37 +41,38 @@ export default function Home(): React.ReactElement {
               new technology. Feel free being my friend.
             </p>
             <div className="flex pt-10 lg:justify-start justify-center">
-              <button
+              <Link
+                to="https://mail.google.com/mail/?to=SmileHacking27@gmail.com"
                 id="random-button"
                 className="flex text-[20px] justify-center items-center rounded-[10px] bg-[var(--black)] w-[150px] h-[50px] cursor-pointer hover:bg-transparent hover:border-white border-[var(--black)] border-2"
               >
                 Contact Me
-              </button>
+              </Link>
             </div>
 
-            <footer className="lg:mt-15 mt-34 lg:ml-2 w-full flex lg:justify-start justify-center gap-4 ">
+            <footer className="lg:mt-20 mt-20 lg:ml-2 w-full flex lg:justify-start justify-center items-center gap-4  ">
               <Link to="https://www.kaggle.com/smilehacking">
                 <img
                   src="/myPortofolio/images/189_Kaggle_logo_logos-512.webp"
-                  className="w-10"
+                  className="w-9 h-full rounded-full bg-[var(--lavender-blush)]"
                 />
               </Link>
               <Link to="https://github.com/smilebruh/smilebruh" className="flex justify-center items-center">
                 <img 
-                  src="/myPortofolio/public/images/github-mark-c791e9551fe4/github-mark/github-mark.png" 
-                  className="w-9 bg-[var(--lavender-blush)] rounded-full"
+                  src="/myPortofolio/images/github-mark.webp" 
+                  className="w-9 h-full bg-[var(--lavender-blush)] rounded-full"
                 />
               </Link>
               <Link to="https://stackoverflow.com/users/29076795/smilebruh">
                 <img 
-                  src="/myPortofolio/public/images/Stack_Overflow_icon.svg" 
-                  className="w-9"  
+                  src="/myPortofolio/images/Stack_Overflow_icon.webp" 
+                  className="w-9 h-full rounded-full"  
                 />
               </Link> 
               <Link to="https://www.instagram.com/dimasalx.sa_/">
                 <img 
-                  src="/myPortofolio/public/images/ig.png" 
-                  className="w-9"
+                  src="/myPortofolio/images/ig.webp" 
+                  className="w-9 h-full rounded-full"
                 />
               </Link>
             </footer>
