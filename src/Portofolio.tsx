@@ -5,9 +5,9 @@ export default function Portofolio(): React.ReactElement {
     document.title = "Portofolio";
   })
   return (
-    <div className="bg-black">
-      
-    </div>
+  <>
+  
+  </>
   )
 }
 

@@ -248,3 +248,8 @@
 }
 
 
+.medSocRef{
+  @apply hover:animate-roundedIconfor animate-roundedIconrev
+}
+
+

@@ -6,6 +6,7 @@ export default function About(): React.ReactElement {
   },[])
 
   return (
-    <></>
+    <>
+    </>
   );
 }
