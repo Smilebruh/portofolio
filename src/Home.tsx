@@ -47,7 +47,7 @@ export default function Home(): React.ReactElement {
             </p>
             <div className="flex pt-10 lg:justify-start justify-center">
               <Link
-                to="https://mail.google.com/mail/?to=SmileHacking27@gmail.com"
+                to="mailto:smilehacking27@gmail.com"
                 id="random-button"
                 className="flex text-[20px] justify-center items-center rounded-[10px] bg-[var(--black)] w-[150px] h-[50px] cursor-pointer hover:bg-transparent hover:border-white border-[var(--black)] border-2"
               >
@@ -55,11 +55,8 @@ export default function Home(): React.ReactElement {
               </Link>
             </div>
 
-            <h1 className="flex mb-5 mt-20 lg:ml-3 text-[17px] lg:justify-start justify-center text-[#db7d66]">
-              Follow me for more
-            </h1>
             <div
-              className=" w-full flex lg:justify-start justify-center items-center gap-4 "
+              className=" w-full flex lg:justify-start justify-center items-center gap-4 mt-25"
             >
               <Link to="https://www.kaggle.com/smilehacking">
                 <img src={kaggleLogo} alt="kaggle logo"  className="w-9 h-full rounded-[5px]" />

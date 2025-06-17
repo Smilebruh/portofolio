@@ -3,8 +3,7 @@ import Home from "./Home";
 import About from "./About";
 import Portofolio from "./Portofolio";
 import { sleep } from "./effect.ts";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-
+import { Route, Routes, Link } from "react-router-dom";
 const linkId: string[] = ["home", "about", "portofolio"];
 
 function changestyle(
@@ -169,9 +168,9 @@ export default function App(): React.ReactElement {
   });
 
   return (
-    <Router>
-      <div className="flex justify-center lg:bg-[var(--background-color)] bg-[var(--main-color)] text-[var(--lavender-blush)] font-roboto z-[0] h-screen w-screen ">
-        <main className="flex flex-col items-center lg:my-6 lg:w-[95%] lg:h-[92%] lg:rounded-[5px] bg-[var(--main-color)] w-screen h-screen">
+    <>
+      <div className="flex justify-center lg:bg-[var(--background-color)] bg-[var(--main-color)] text-[var(--lavender-blush)] font-roboto z-[0] min-h-screen min-w-screen">
+        <main className="flex flex-col items-center lg:my-6 lg:rounded-[5px] bg-[var(--main-color)] min-w-[95%] min-h-[92%]">
           <nav className="rounded-[5px] flex lg:justify-center justify-end h-[10%] lg:mt-5 w-[97%] items-center">
             <div ref={linkBox} className="lg:flex items-center justify-center lg:w-auto flex w-[85%] lg:h-auto h-[50%] hidden">
               <h1 className="hidden lg:flex text-[30px] font-bold mr-60 text-[#9f5062]">Fiona</h1>
@@ -221,6 +220,6 @@ export default function App(): React.ReactElement {
           </Routes>
         </main>
       </div>
-    </Router>
+    </>
   );
 }
